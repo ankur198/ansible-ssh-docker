@@ -10,8 +10,12 @@ Since this repo contains files permission that are for root user, it is recommen
 
 ```bash
 sudo su
-git clone ankur198/ansible-ssh-docker
+git clone https://github.com/ankur198/ansible-ssh-docker
 cd ansible-ssh-docker
+```
+Once cloned change permission of ssh files so that they are recognised as valid by running the following command: 
+```bash
+chmod 700 ./ssh && chmod 700 ./ssh/*
 ```
 
 Make sure that file permissions are correct.
