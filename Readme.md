@@ -37,18 +37,19 @@ It should look like this:
 
 and `ls -la ./ssh` should look like this:
 
-    total 24
-    drwx------ 2 root  root  4096 Feb 11 00:17 .
-    drwxr-xr-x 4 ankur ankur 4096 Feb 11 00:09 ..
-    -rw-r--r-- 1 root  root  1142 Feb 11 00:06 authorized_keys
-    -r-------- 1 root  root    36 Feb 11 00:15 config
-    -rw------- 1 root  root  2602 Feb 11 00:00 id_rsa
-    -rw-r--r-- 1 root  root   571 Feb 11 00:00 id_rsa.pub
+    total 28
+    drwx------ 2 root root 4096 Feb 11 00:39 .
+    drwxr-xr-x 4 root root 4096 Feb 11 00:37 ..
+    -rwx------ 1 root root 1142 Feb 11 00:37 authorized_keys
+    -rwx------ 1 root root   36 Feb 11 00:37 config
+    -rwx------ 1 root root 2602 Feb 11 00:37 id_rsa
+    -rwx------ 1 root root  571 Feb 11 00:37 id_rsa.pub
+    -rw-r--r-- 1 root root  142 Feb 11 00:39 known_hosts
 
 ## Start containers
 
 ```bash
-docker-compose up -d
+docker compose up -d
 ```
 
 ## Exec into ansible-server
