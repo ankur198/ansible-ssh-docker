@@ -55,6 +55,8 @@ docker exec -it ansible-server bash
 
 ## Test SSH connection
 
+From within shell of ansible-server execute the following
+
 ```bash
 ssh root@ansible-client-1
 ```
