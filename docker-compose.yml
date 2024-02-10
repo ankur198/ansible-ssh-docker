@@ -1,0 +1,22 @@
+version: "3"
+services:
+  ansible-server:
+    container_name: ansible-server
+    build:
+      context: .
+      dockerfile: Dockerfile.server
+    command: sleep infinity
+    volumes:
+      - ./ssh:/root/.ssh
+  
+  # ssh root@ansible-client-1
+  ansible-client-1:
+    container_name: ansible-client-1
+    build:
+      context: .
+      dockerfile: Dockerfile.node
+    depends_on:
+      - ansible-server
+    volumes:
+      - ./ssh:/root/.ssh
+      - ./sshd_config:/etc/ssh/sshd_config
